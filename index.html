@@ -5,95 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Musical Arts Club — play, serve, perform. No music experience needed.">
 <title>Musical Arts Club</title>
+<link rel="icon" type="image/png" href="logo.png">
 <style>
 :root{
-  --teal:#20d3d2;
-  --teal-2:#1aa9aa;
-  --deep:#174f50;
-  --deep-2:#103b3d;
-  --ink:#1d5a5b;
+  --brand:#3cc
+  --brand2:#255
+  --accent: #fc0
   --muted:#6b8585;
   --cream:#fbfefd;
   --soft:#edf8f6;
   --line:rgba(23,79,80,.13);
-  --yellow:#ffc95a;
+  --yellow:#ffcc55;
   --shadow:0 24px 70px rgba(16,59,61,.14);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+body{margin:0;background:var(--cream);color:#255;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
 a{color:inherit}
 .container{width:min(1160px,calc(100% - 44px));margin:auto}
-.nav{position:fixed;z-index:50;inset:0 0 auto;background:rgba(251,254,253,.84);backdrop-filter:blur(18px);border-bottom:1px solid rgba(23,79,80,.08)}
+.nav{position:fixed;z-index:50;inset:0 0 auto;background:#fff;backdrop-filter:blur(18px);border-bottom:1px solid rgba(23,79,80,.08)}
 .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;letter-spacing:.11em;font-size:.82rem;color:var(--deep)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;letter-spacing:.11em;font-size:.82rem;color:#255}
 .brand-mark{width:48px;height:48px;display:grid;place-items:center;flex:0 0 48px}
 .brand-mark img{width:48px;height:48px;object-fit:contain;display:block}
 .navlinks{display:flex;align-items:center;gap:27px;font-size:.9rem;font-weight:800}
 .navlinks a{text-decoration:none;opacity:.72;transition:.2s}
 .navlinks a:hover{opacity:1;color:var(--teal-2)}
-.nav-cta{padding:11px 18px;border-radius:999px;background:var(--deep);color:#fff!important;opacity:1!important}
+.nav-cta{padding:11px 18px;background:#255;color:#fff!important;opacity:1!important}
 .hero{position:relative;overflow:hidden;padding:150px 0 100px;background:linear-gradient(135deg,#f3fffc 0%,#ffffff 48%,#dff9f6 100%)}
-.hero::before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;right:-250px;top:-330px;background:rgba(32,211,210,.13)}
-.hero::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;left:-210px;bottom:-200px;background:rgba(255,201,90,.13)}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:70px}
-.eyebrow,.kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.18em;font-size:.73rem;font-weight:950;color:var(--teal-2)}
-.eyebrow::before{content:"";width:34px;height:3px;border-radius:99px;background:var(--teal)}
-h1{font-size:clamp(3.5rem,7.3vw,7rem);line-height:.88;letter-spacing:-.065em;color:var(--deep);margin:18px 0 28px;max-width:760px}
-h1 .serve-word{color:var(--yellow)}
-h1 .perform-word{color:var(--teal)}
+.kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.18em;font-size:.73rem;font-weight:950;color:#3cc}
+h1{font-size:clamp(3.5rem,7.3vw,7rem);line-height:.88;letter-spacing:-.065em;color:#255;margin:18px 0 28px;max-width:760px}
 .lede{font-size:1.18rem;color:#577575;max-width:610px;margin:0 0 32px}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;border-radius:999px;text-decoration:none;font-weight:900;transition:transform .2s,box-shadow .2s,background .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;text-decoration:none;font-weight:900;transition:transform .2s,box-shadow .2s,background .2s}
 .btn:hover{box-shadow:0 12px 25px rgba(16,59,61,.12)}
-.btn-primary{background:var(--deep);color:#fff}
+.btn-primary{background:#255 ;color:#fff}
 .btn-secondary{background:#fff;border:1px solid var(--line)}
-.hero-visual{display:grid;place-items:center;position:relative;min-height:510px}
-.logo-square{width:min(470px,100%);aspect-ratio:1;border-radius:38px;position:relative;display:grid;place-items:center;overflow:hidden;box-shadow:var(--shadow);transform:rotate(1.5deg);background:linear-gradient(145deg,#49ebe0 0%,#24d5d2 27%,#159da1 64%,#15595a 100%)}
-.logo-square::before{content:"";position:absolute;inset:16px;border:1px solid rgba(255,255,255,.3);border-radius:28px}
-.logo-square::after{content:"";position:absolute;width:390px;height:390px;border-radius:50%;border:1px solid rgba(255,255,255,.15);right:-150px;bottom:-150px}
-.logo-square img{position:relative;z-index:2;width:82%;height:auto;object-fit:contain;filter:drop-shadow(0 18px 18px rgba(0,0,0,.12))}
-.note{position:absolute;z-index:4;padding:13px 17px;border-radius:15px;font-weight:950;letter-spacing:.03em;box-shadow:0 15px 35px rgba(16,59,61,.14)}
-.note.one{top:30px;right:-8px;background:var(--yellow);color:var(--deep);transform:rotate(6deg)}
-.note.two{bottom:42px;left:-4px;background:#fff;color:var(--deep);transform:rotate(-5deg)}
+.btn-tertiary{background:#fc0; color:#255}
+.note{position:absolute;z-index:4;padding:13px 17px;font-weight:950;letter-spacing:.03em;box-shadow:0 15px 35px rgba(16,59,61,.14)}
+.note.one{top:30px;right:-8px;background:#fc0;color:#255;transform:rotate(6deg)}
+.note.two{bottom:42px;left:-4px;background:#fff;color:#255;transform:rotate(-5deg)}
 .section{padding:105px 0}
 .section.soft{background:var(--soft)}
 .section-top{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:46px}
-h2{font-size:clamp(2.25rem,4.4vw,4.1rem);line-height:.98;letter-spacing:-.055em;color:var(--deep);margin:0}
+h2{font-size:clamp(2.25rem,4.4vw,4.1rem);line-height:.98;letter-spacing:-.055em;color:#255;margin:0}
 .section-top p{max-width:470px;color:var(--muted);margin:0}
-.intro-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
-.big-line{font-size:clamp(2rem,4vw,3.7rem);line-height:1.02;letter-spacing:-.045em;font-weight:900;color:var(--deep);margin:0}
-.big-line em{font-style:normal;color:var(--teal-2)}.music-word,.impact-word{color:var(--teal)}.community-word{color:var(--yellow)}
-.body-copy{font-size:1.06rem;color:#5d7777;margin:0 0 24px}
-.reason-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.reason{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px 21px;min-height:105px}
-.reason strong{display:block;color:var(--deep);font-size:1.02rem;margin-bottom:5px}
-.reason span{color:var(--muted);font-size:.93rem}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:30px;box-shadow:0 12px 34px rgba(16,59,61,.055);transition:transform .2s,box-shadow .2s}
+.card{background:#fff;border:1px solid var(--line);padding:30px;box-shadow:0 12px 34px rgba(16,59,61,.055);transition:transform .2s,box-shadow .2s}
 .card:hover{box-shadow:0 20px 45px rgba(16,59,61,.10)}
-.card-icon{width:52px;height:52px;border-radius:16px;background:var(--soft);display:grid;place-items:center;color:var(--teal-2);font-size:1.5rem;font-weight:900;margin-bottom:22px}
-.card h3{font-size:1.28rem;color:var(--deep);margin:0 0 9px}
+.card h3{font-size:1.28rem;color:#255;margin:0 0 9px}
 .card p{color:var(--muted);margin:0}
-.host-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
-.host-main{background:var(--deep);color:#fff;border-radius:28px;padding:40px;position:relative;overflow:hidden}
-.host-main::after{content:"♫";position:absolute;font-size:16rem;line-height:1;right:-18px;bottom:-55px;color:rgba(32,211,210,.18);font-weight:200}
-.host-main h3{position:relative;z-index:1;font-size:2.2rem;letter-spacing:-.035em;margin:0 0 14px}
-.host-main p{position:relative;z-index:1;color:#c6dfdd;max-width:620px;margin:0 0 24px}
-.tag-list{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:9px}
-.tag{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.13);font-size:.83rem;font-weight:850}
-.host-side{background:#fff;border:1px solid var(--line);border-radius:28px;padding:35px}
-.host-side .kicker{margin-bottom:14px}
-.host-side h3{font-size:1.65rem;color:var(--deep);margin:0 0 15px}
-.host-side p{color:var(--muted);margin:0}
-.recruit{margin-top:18px;border-radius:20px;padding:18px 20px;background:linear-gradient(135deg,#fff7d9,#fff);border:1px solid rgba(255,201,90,.55);color:var(--deep);font-weight:900}
-.join{position:relative;overflow:hidden;background:var(--deep-2);color:#fff;padding:95px 0}
-.join::before{content:"";position:absolute;width:540px;height:540px;border-radius:50%;border:1px solid rgba(255,255,255,.1);right:-250px;top:-280px}
+.join{position:relative;overflow:hidden;background:var(#fff);color:#fff;padding:95px 0}
 .join-grid{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:45px}
-.join h2{color:#fff;max-width:730px}
-.join p{color:#bdd6d5;max-width:680px;margin:16px 0 0}
-.join .btn-primary{background:#ffd15c;color:#173f40;box-shadow:0 10px 25px rgba(255,209,92,.22)}
-footer{background:#0b3031;color:#91b7b6;padding:30px 0}
+.join h2{color:#255;max-width:730px}
+
+footer{background:#255;color:#cee;padding:30px 0}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
 .footer-links{display:flex;flex-wrap:wrap;gap:19px;font-size:.88rem}
 .footer-links a{text-decoration:none}
@@ -101,22 +67,19 @@ footer{background:#0b3031;color:#91b7b6;padding:30px 0}
 .small{font-size:.82rem}
 
 .instagram-showcase{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}
-.instagram-copy{border-radius:28px;padding:38px;background:linear-gradient(145deg,var(--deep),#0f7778);color:#fff;position:relative;overflow:hidden;min-height:470px;display:flex;flex-direction:column;justify-content:center}
+.instagram-copy{padding:38px;background:linear-gradient(145deg,#255,#177);color:#fff;position:relative;overflow:hidden;min-height:470px;display:flex;flex-direction:column;justify-content:center}
 .instagram-copy::after{content:"◎";position:absolute;right:-35px;bottom:-95px;font-size:18rem;line-height:1;color:rgba(255,255,255,.07)}
-.instagram-copy .kicker{position:relative;z-index:1;color:#9ef4eb}
+.instagram-copy .kicker{position:relative;z-index:1;color:#cee}
 .instagram-copy h3{position:relative;z-index:1;font-size:2.35rem;line-height:1.02;letter-spacing:-.04em;margin:14px 0}
-.instagram-copy p{position:relative;z-index:1;color:#c9e4e1;max-width:420px;margin:0 0 20px}
+.instagram-copy p{position:relative;z-index:1;color:#cee;max-width:420px;margin:0 0 20px}
 .instagram-copy a{position:relative;z-index:1;color:#fff;font-weight:900;text-decoration:none}
-.ig-badge{position:relative;z-index:1;width:58px;height:58px;border:2px solid rgba(255,255,255,.8);border-radius:17px;display:grid;place-items:center;font-size:2rem;margin-bottom:22px}
-.instagram-embed-wrap{background:#f4fbfa;border:1px solid var(--line);border-radius:28px;padding:18px;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:470px}
+.instagram-embed-wrap{background:#fff;border:1px solid var(--line);padding:18px;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:470px}
 .instagram-embed-wrap .instagram-media{max-height:620px;overflow:auto}
 @media(max-width:900px){.instagram-showcase{grid-template-columns:1fr}.instagram-copy{min-height:360px}.instagram-embed-wrap{min-height:420px}}
 
 @media(max-width:900px){
- .navlinks a:not(.nav-cta){display:none}
  .hero{padding-top:125px}
- .hero-grid,.intro-grid,.host-grid{grid-template-columns:1fr;gap:42px}
- .hero-visual{min-height:430px}
+ .hero-grid,.host-grid{grid-template-columns:1fr;gap:42px}
  .cards{grid-template-columns:1fr}
  .section-top{display:block}
  .section-top p{margin-top:15px}
@@ -127,18 +90,12 @@ footer{background:#0b3031;color:#91b7b6;padding:30px 0}
 @media(max-width:560px){
  .container{width:min(100% - 28px,1160px)}
  .nav-inner{height:68px}
- .brand span{display:none}
  .hero{padding:105px 0 72px}
  h1{font-size:3.55rem}
- .hero-visual{min-height:335px}
- .logo-square{border-radius:28px}
- .logo-square::before{inset:11px;border-radius:20px}
  .note{font-size:.78rem}
  .note.one{right:0;top:15px}
  .note.two{left:0;bottom:12px}
  .section{padding:75px 0}
- .reason-grid{grid-template-columns:1fr}
- .host-main,.host-side{padding:26px}
 }
 </style>
 </head>
@@ -158,46 +115,17 @@ footer{background:#0b3031;color:#91b7b6;padding:30px 0}
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">A music community</div>
-      <h1>Play.<br><span class="serve-word">Serve.</span><br><span class="perform-word">Perform.</span></h1>
-      <p class="lede">Musical Arts Club is a place to make music, try something new, meet new people, and stay involved — no music experience needed.</p>
+      <h1>Play.<br><span style = "color:#fc0">Serve.</span><br><span style = "color:#3cc">Perform.</span></h1>
+      <p class="lede">Musical Arts Club is a student run music club for everyone - no music experience needed.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://forms.gle/rP2HDCnzv4ZaQ1gf9">Join the Club →</a>
         <a class="btn btn-secondary" href="#what-we-do">See what we do</a>
       </div>
     </div>
-    <div class="hero-visual" aria-label="Musical Arts Club logo">
-      <div class="logo-square">
-        <img src="logowhite.png">
-      </div>
-      <div class="note one">NO EXPERIENCE NEEDED</div>
-      <div class="note two">MAKE MUSIC · HAVE FUN</div>
-    </div>
   </div>
 </section>
 
-<section class="section" id="about">
-  <div class="container">
-    <div class="intro-grid">
-      <div ><div class="kicker">Why Musical Arts Club</div><h2>More than a club.<br>A place to belong.</h2></div>
-      <p class="body-copy">Whether you're looking for a new instrument, a way to stay involved after band, or simply a fun community, there's room for you here.</p>
-    </div>
-    <div class="intro-grid">
-      <p class="big-line"><br>Explore <span class="music-word">music</span>.<br>Build <span class="community-word">community</span>.<br>Make an <span class="impact-word">impact</span>.</p>
-      <div>
-        <p class="body-copy">Musical Arts Club brings people together through music and community. You can explore a different instrument, keep making music after leaving band, use music to serve your community, or just come make music and have fun.</p>
-        <div class="reason-grid">
-          <div class="reason"><strong>Try something new</strong><span>Explore a new instrument or play something different.</span></div>
-          <div class="reason"><strong>Stay involved</strong><span>Keep making music even after leaving band.</span></div>
-          <div class="reason"><strong>Serve your community</strong><span>Use music to give back and earn volunteer hours.</span></div>
-          <div class="reason"><strong>Meet people</strong><span>Make music together and have a good time.</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section soft" id="what-we-do">
+<section class="section" id="what-we-do">
   <div class="container">
     <div class="section-top">
       <div><div class="kicker">What we do</div><h2>Music, people,<br>and a lot of fun.</h2></div>
@@ -208,37 +136,16 @@ footer{background:#0b3031;color:#91b7b6;padding:30px 0}
       <article class="card"><h3>Jam Nights</h3><p>Bring your instrument, meet other musicians, and make music together in a low-pressure setting.</p></article>
       <article class="card"><h3>Game Nights + More</h3><p>Not every meetup has to be about playing. We also make space to hang out, connect, and have fun.</p></article>
     </div>
-    <div class="host-grid" style="margin-top:18px">
-      <div class="host-main">
-        <h3>Play. Serve. Perform.</h3>
-        <p>Music can be creative, social, and useful. Musical Arts Club gives you ways to do all three.</p>
-        <div class="tag-list"><span class="tag">Learn</span><span class="tag">Create</span><span class="tag">Perform</span><span class="tag">Volunteer</span><span class="tag">Connect</span></div>
-      </div>
-      <aside class="host-side">
-        <div class="kicker">Get involved</div>
-        <h3>Ready to join?</h3>
-        <p>Join through Discord, or use the alternative sign-up form if that's easier.</p>
-        <div class="recruit">Currently recruiting for freshman officers!</div>
-      </aside>
-    </div>
   </div>
 </section>
 
-<section class="section" id="instagram">
+<section class="section soft" id="instagram">
   <div class="container">
-    <div class="section-top">
-      <div><div class="kicker">Follow along</div><h2>See what we're<br>making lately.</h2></div>
-      <div>
-        <p>Performances, meetups, music, and club moments live on our Instagram. Follow <strong>@musicalarts.club</strong> for the newest updates.</p>
-        <div class="actions" style="margin-top:18px"><a class="btn btn-primary" href="https://www.instagram.com/musicalarts.club/" target="_blank" rel="noopener">Open Instagram ↗</a></div>
-      </div>
-    </div>
     <div class="instagram-showcase">
       <div class="instagram-copy">
-        <div class="ig-badge">◎</div>
         <div>
           <div class="kicker">@musicalarts.club</div>
-          <h3>Music in the real world.</h3>
+          <h3>Follow Along</h3>
           <p>Check the profile for the latest posts, reels, event announcements, and behind-the-scenes moments from Musical Arts Club.</p>
           <a href="https://www.instagram.com/musicalarts.club/" target="_blank" rel="noopener">View the latest posts →</a>
         </div>
@@ -255,13 +162,11 @@ footer{background:#0b3031;color:#91b7b6;padding:30px 0}
 <section class="join" id="join">
   <div class="container join-grid">
     <div>
-      <div class="kicker" style="color:var(--teal)">Your next move</div>
       <h2>Come make some noise with us.</h2>
-      <p>No music experience required. If you want to try something new, stay involved, serve, perform, or simply have fun, you're invited.</p>
     </div>
     <div class="actions">
-      <a class="btn btn-primary" href="https://discord.gg/BtY4Mt3v5U">Join on Discord →</a>
-      <a class="btn" style="background:transparent;color:#fff;border:1px solid rgba(255,255,255,.24)" href="https://forms.gle/rP2HDCnzv4ZaQ1gf9">Membership form</a>
+      <a class="btn btn-tertiary" href="https://discord.gg/BtY4Mt3v5U">Join on Discord →</a>
+      <a class="btn btn-primary" href="https://forms.gle/rP2HDCnzv4ZaQ1gf9">Membership form</a>
     </div>
   </div>
 </section>
